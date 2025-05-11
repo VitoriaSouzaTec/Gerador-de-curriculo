@@ -4,7 +4,10 @@ import NavBar from "../components/NavBar"
 import { ImProfile } from "react-icons/im";
 import { CiClock2 } from "react-icons/ci";
 import { MdOutlineFileDownload } from "react-icons/md";
-import Footer from "@/components/ui/Footer";
+import Footer from "@/components/Footer";
+import Link from "next/link";
+import Cadastro from "./cadastro";
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -29,9 +32,14 @@ export default function Home() {
         <p className="mt-4 text-gray-600 text-lg">
           Transforme seu perfil profissional com nossos currículos intuitivos e fáceis de usar.
         </p>
+
+        <Link href="/cadastro">
         <button className="mt-6 px-6 py-3 bg-black text-white rounded-lg text-lg font-semibold hover:bg-gray-800 transition">
-          Começar agora
+        Começar agora
         </button>
+        </Link>
+
+        
       </section>
 
       {/* Features Section */}
