@@ -4,9 +4,11 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import login from "../pages/login";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  
 
   const menuItems = [
     { name: "Início", href: "/" },
@@ -49,8 +51,11 @@ export default function Navbar() {
         </div>
 
         {/* Botão de ação */}
+
         <div className="hidden sm:flex">
+          <Link href="/login">
           <Button variant="default">Entrar</Button>
+          </Link>
         </div>
       </div>
 
